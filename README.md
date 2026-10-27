@@ -1,5 +1,7 @@
 # FORMA — sculpt your habits
 
+**Live demo: https://forma-fitness-d3e.pages.dev**
+
 A calm, responsive fitness tracker: workouts, interval timer, exercise guides with animated demonstrations, nutrition tracking and weekly reviews. Consistency slowly reveals a marble sculpture.
 
 > **Status: working demo.** Everything runs in the browser and data is saved to that browser's `localStorage`. There are no accounts, no server and no sync between devices yet. See *Demo vs production* below.
