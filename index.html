@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>FORMA — sculpt your habits</title>
+    <meta name="description" content="A calm fitness tracker for workouts, nutrition and progress, where your consistency slowly reveals a marble sculpture." />
+    <meta name="theme-color" content="#E9E7E1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1C1F23" media="(prefers-color-scheme: dark)" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      try {
+        var s = JSON.parse(localStorage.getItem('forma:v1') || '{}');
+        var t = s && s.profile && s.profile.theme;
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        var ts = s && s.profile && s.profile.textScale;
+        if (ts) document.documentElement.style.setProperty('--text-scale', ts);
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="/assets/app.css?v=__VERSION__" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>FORMA needs JavaScript to run.</noscript>
+    <script type="module" src="/assets/app.js?v=__VERSION__"></script>
+  </body>
+</html>
